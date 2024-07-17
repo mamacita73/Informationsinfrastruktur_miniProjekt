@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated projektStudenten -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="projektStudenten.presentation.ProjektStudentenModelWizardID"
+            name="%_UI_ProjektStudentenModelWizard_label"
+            class="projektStudenten.presentation.ProjektStudentenModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProjektStudentenModelFile.gif">
+         <description>%_UI_ProjektStudentenModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated projektStudenten -->
+      <editor
+            id="projektStudenten.presentation.ProjektStudentenEditorID"
+            name="%_UI_ProjektStudentenEditor_label"
+            icon="icons/full/obj16/ProjektStudentenModelFile.gif"
+            extensions="projektstudenten"
+            class="projektStudenten.presentation.ProjektStudentenEditor"
+            contributorClass="projektStudenten.presentation.ProjektStudentenActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
