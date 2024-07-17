@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/projektStudenten/src" modelPluginID="projektStudenten"
+    modelName="ProjektStudenten" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="22.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>projektStudenten.ecore</foreignModel>
+  <genPackages prefix="ProjektStudenten" disposableProviderFactory="true" ecorePackage="projektStudenten.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projektStudenten.ecore#//Grade">
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Grade/A"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Grade/B"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Grade/C"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Grade/D"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Grade/F"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projektStudenten.ecore#//Semester">
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/TWO"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/THREE"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/FOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/FIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="projektStudenten.ecore#//Semester/SIX"/>
+    </genEnums>
+    <genClasses ecoreClass="projektStudenten.ecore#//ServiceFacade">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//ServiceFacade/results"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//ServiceFacade/students"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//ServiceFacade/programs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//ServiceFacade/allCourses"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Result">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Result/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projektStudenten.ecore#//Result/value"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Student">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Student/completedCourses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projektStudenten.ecore#//Student/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Student/transcript"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Student/program"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projektStudenten.ecore#//Student/semester"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Student/enrolledCourses"/>
+      <genOperations ecoreOperation="projektStudenten.ecore#//Student/canComplete">
+        <genParameters ecoreParameter="projektStudenten.ecore#//Student/canComplete/c"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Program/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Program/courses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Program/enrolled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projektStudenten.ecore#//Program/label"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//CourseSet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//CourseSet/elements"/>
+      <genOperations ecoreOperation="projektStudenten.ecore#//CourseSet/allPrereqs"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projektStudenten.ecore#//Course/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Course/allPrereqs.1"/>
+      <genOperations ecoreOperation="projektStudenten.ecore#//Course/isElective"/>
+      <genOperations ecoreOperation="projektStudenten.ecore#//Course/allPrereqs"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Advanced">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projektStudenten.ecore#//Advanced/course"/>
+    </genClasses>
+    <genClasses ecoreClass="projektStudenten.ecore#//Introductory"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<projektStudenten:ServiceFacade xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:projektStudenten="http://www.example.org/projektStudenten">
+  <results key="//@allCourses.0" value="A"/>
+  <students name="Nadja" transcript="//@results.0" program="//@programs.0"/>
+  <students name="Finn"/>
+  <programs enrolled="//@students.0" label="Informatik">
+    <courses elements="//@allCourses.0 //@allCourses.1 //@allCourses.2 //@allCourses.3"/>
+  </programs>
+  <allCourses xsi:type="projektStudenten:Introductory" title="Mathe 1"/>
+  <allCourses xsi:type="projektStudenten:Advanced" title="Mathe 2">
+    <allPrereqs elements="//@allCourses.0"/>
+  </allCourses>
+  <allCourses xsi:type="projektStudenten:Advanced" title="Mathe 3">
+    <allPrereqs elements="//@allCourses.1"/>
+  </allCourses>
+  <allCourses xsi:type="projektStudenten:Advanced" title="Gesch&#xe4;ftsprozessmodellierung">
+    <allPrereqs elements="//@allCourses.2"/>
+  </allCourses>
+</projektStudenten:ServiceFacade>
